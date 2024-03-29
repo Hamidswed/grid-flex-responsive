@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRID</title>
+  <style>
+    .el--1 {
+      background-color: blueviolet;
+    }
+
+    .el--2 {
+      background-color: orangered;
+      /* grid-column: 1 / 5; */
+      /* grid-column: 1 / span 4; */
+      /* grid-column: 1 / -1; */
+      /* grid-row: 3 / 4; */
+    }
+
+    .el--3 {
+      background-color: green;
+      height: 150px;
+    }
+
+    .el--4 {
+      background-color: goldenrod;
+    }
+
+    .el--5 {
+      background-color: palevioletred;
+    }
+
+    .el--6 {
+      background-color: steelblue;
+    }
+
+    .el--7 {
+      background-color: yellow;
+    }
+
+    .el--8 {
+      background-color: crimson;
+      /* grid-column: 2 / 3; */
+      /* grid-column: 2 / span 2; */
+      /* grid-row: 1 / span 2; */
+      /* grid-row: 1 / 3; */
+    }
+
+    .container--1 {
+      font-family: sans-serif;
+      background-color: #ddd;
+      font-size: 40px;
+      margin: 40px;
+
+      /* css grid */
+      display: grid;
+      /* grid-template-columns: 1fr 1fr 1fr auto; */
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+
+      /* gap: 30px; */
+      column-gap: 10px;
+      row-gap: 20px;
+      display: none;
+    }
+
+    .container--2 {
+      font-family: sans-serif;
+      background-color: black;
+      font-size: 40px;
+      margin: 40px;
+      width: 700px;
+      height: 600px;
+      /* css grid */
+      display: grid;
+      grid-template-columns: 100px 150px 100px 150px;
+      grid-template-rows: 200px 300px;
+
+      /* gap: 30px; */
+      column-gap: 10px;
+      row-gap: 20px;
+
+      /* Aligning tracks inside container */
+      /* align-content: center; */
+      align-content: center;
+      justify-content: center;
+
+      /* Aligning items insdie cells: moving items 
+      inside cells */
+      align-items: end;
+      justify-items: end;
+      display: none;
+    }
+
+    .el--6 {
+      align-self: center;
+      justify-self: center;
+    }
+
+
+    .items {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 1rem;
+    }
+
+    /* RESONSIVE DESDING : MOBILE FIRST APPROACH */
+    @media screen and (min-width: 768px) {
+      .items {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .items {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    /* 640, 768, 1024, 1280, 1336, 1530 => break point */
+    
+  </style>
+</head>
+
+<body>
+  <div class="container--1">
+    <div class="el el--1">(1)</div>
+    <div class="el el--2">(2)</div>
+    <div class="el el--3">(3)</div>
+    <div class="el el--4">(4)</div>
+    <div class="el el--5">(5)</div>
+    <div class="el el--6">(6)</div>
+    <div class="el el--7">(7)</div>
+    <div class="el el--8">(8)</div>
+  </div>
+  <div class="container--2">
+    <div class="el el--1">(1)</div>
+    <div class="el el--2">(2)</div>
+    <div class="el el--3">(3)</div>
+    <div class="el el--4">(4)</div>
+    <div class="el el--5">(5)</div>
+    <div class="el el--6">(6)</div>
+    <div class="el el--7">(7)</div>
+    <div class="el el--8">(8)</div>
+
+  </div>
+  <div class="items">
+    <div class="item">(1)</div>
+    <div class="item">(2)</div>
+    <div class="item">(3)</div>
+    <div class="item">(4)</div>
+    <div class="item">(5)</div>
+    <div class="item">(6)</div>
+    <div class="item">(7)</div>
+    <div class="item">(8)</div>
+  </div>
+</body>
+
+</html>
